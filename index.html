@@ -1,7 +1,6 @@
 
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,20 +37,20 @@
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/style.css" rel="stylesheet">
     
     <link href="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.css" rel="stylesheet">
-     <!-- <script src="/staticfiles/landing_page_gen/render.js"></script>   -->
+    
     <script src="https://prophone.herokuapp.com/staticfiles/landing_page_gen/render.js"></script> 
 </head>
 
 <body>
 
-<div class = "flex w-full flex-col">  
-    
 
-<div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
+
+<div class = "flex w-full flex-col">  
+    <div class="fixed z-40 w-full lg:h-25 lg:py-4 items-start justify-start  bg-white text-gray-700  dark-mode:text-gray-200 dark-mode:bg-gray-800">
   <div x-data="{ open: false }" class="flex flex-col lg:flex-r max-w-screen-xl px-4 mx-auto lg:items-center lg:justify-between lg:flex-row lg:px-6 lg:px-8">
     <div class="py-4 flex flex-row items-center justify-between">
       
-        <a href= " index "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/O44IWTZPL6DUR1AV5WZ7IUDJ9LGFVYON5HX4T93G.png" alt="Junk Junkies, LLC logo"> </a>
+        <a href= " #about "> <img class="h-16 w-auto relative" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/O44IWTZPL6DUR1AV5WZ7IUDJ9LGFVYON5HX4T93G.png" alt="Junk Junkies, LLC logo"> </a>
       
       <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
         <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -60,36 +59,46 @@
         </svg>
       </button>
     </div>
-    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:flex-row  lg:justify-center ">
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:flex-row  lg:justify-end ">
     
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="index">About Us
+    href="#about">About Us
 </a>
       
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="services">Our Services
+    href="#services">Our Services
 </a>
- 
+     
       
-        
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="gallery">Our Best Work
+    href="#our-work">Our Best Work
 </a>
- 
-      
+     
            
       
 <a 
     class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
-    href="testimonials">Testimonials &amp; Reviews
+    href="#testimonials">Testimonials &amp; Reviews
 </a>
  
-              
+         
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#faqs">Faqs
+</a>
+     
+      
+<a 
+    class="px-4 py-2 mt-2 text-lg  font-bold bg-transparent rounded-lg lg:mt-0 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" 
+    href="#find-us">Service Areas
+</a>
+   
     
   
 
@@ -117,7 +126,7 @@
         <button type="button" 
          
         onclick= "send_sms(0, 'Junk-Junkies-LLC')" 
-        class="w-full px-3 py-4 font-bold font-lg text-white  bg-gray-400 text-white hover:bg-black hover:text-gray-400 rounded-lg">Send</button> 
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-red-600 text-white hover:bg-black hover:text-red-600 rounded-lg">Send</button> 
         </div>           
 
     </form>
@@ -128,10 +137,8 @@
     </nav>
   </div>
 </div>
-
-
     <section   
-class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex-wrap sm:mx-auto pt-12 mt-12">
+class="flex relative flex-col w-full  bg-gray-700 text-white  lg:flex-row lg:flex-wrap sm:mx-auto pt-12 mt-12">
     <div class="flex justify-end p-8 lg:py-32 lg:px-16 lg:pl-10 lg:w-1/2">
         <div class="flex flex-col items-center lg:items-start justify-center w-full lg:max-w-lg">
             <h2 class="mb-3 text-3xl text-center font-extrabold  leading-none sm:text-4xl lg:text-7xl text-center lg:text-left">
@@ -156,7 +163,7 @@ class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex
  id="" type="button" x-on:click.prevent="open = true" class=" 
   w-full lg:w-auto 
 
-    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-red-800 z-30">
+    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-red-600 text-white hover:bg-white hover:text-gray-700 z-30">
     <h5 class="text-3xl font-extrabold">Call Now</h5> 
 </button>
 
@@ -174,7 +181,7 @@ class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex
  id="" type="button" x-on:click.prevent="open = true" class=" 
   w-full lg:w-auto 
 
-    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-red-800 z-30">
+    inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-red-600 text-white hover:bg-white hover:text-gray-700 z-30">
     <h5 class="text-3xl font-extrabold">Send us a Text</h5> 
 </button>
 
@@ -197,7 +204,7 @@ class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex
         <button type="button" 
          
         onclick= "send_sms(1, 'Junk-Junkies-LLC')" 
-        class="w-full px-3 py-4 font-bold font-lg text-white  bg-gray-400 text-white hover:bg-black hover:text-gray-400 rounded-lg">Send</button> 
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-red-600 text-white hover:bg-black hover:text-red-600 rounded-lg">Send</button> 
         </div>           
 
     </form>
@@ -215,7 +222,7 @@ class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex
  id="side-button" type="button" x-on:click.prevent="open = true" class=" 
   
 
-   mb-3 fixed bottom-0 -right-80 z-10 mr-3 lg:mr-0 z-40 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-gray-400 text-white hover:bg-white hover:text-red-800 z-30">
+   mb-3 fixed bottom-0 -right-80 z-10 mr-3 lg:mr-0 z-40 inline-flex items-center justify-center h-24 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none  bg-red-600 text-white hover:bg-white hover:text-gray-700 z-30">
     <h5 class="text-3xl font-extrabold">Send us a Text</h5> 
 </button>
 
@@ -238,7 +245,7 @@ class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex
         <button type="button" 
          
         onclick= "send_sms(2, 'Junk-Junkies-LLC')" 
-        class="w-full px-3 py-4 font-bold font-lg text-white  bg-gray-400 text-white hover:bg-black hover:text-gray-400 rounded-lg">Send</button> 
+        class="w-full px-3 py-4 font-bold font-lg text-white  bg-red-600 text-white hover:bg-black hover:text-red-600 rounded-lg">Send</button> 
         </div>           
 
     </form>
@@ -261,7 +268,7 @@ class="flex relative flex-col w-full  bg-red-800 text-white  lg:flex-row lg:flex
         
 </section>
     <section   id = "about" 
-class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  bg-white text-red-800 ">
+class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  bg-white text-gray-700 ">
         <div class="relative lg:w-1/2">
         
             
@@ -284,7 +291,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                 
     <div 
       
-    class="pb-30 mx-auto w-1/3   text-gray-400 " data-aos="fade-down" data-aos-delay="400" >
+    class="pb-30 mx-auto w-1/3   text-red-600 " data-aos="fade-down" data-aos-delay="400" >
         <span> <i class="fas fa-shield-alt fa-2x "></i> </span>
         <div class="mt-5 text-md font-bold uppercase ">
             Insured
@@ -301,7 +308,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                 
     <div 
       
-    class="pb-30 mx-auto w-1/3   text-gray-400 " data-aos="fade-down" data-aos-delay="400" >
+    class="pb-30 mx-auto w-1/3   text-red-600 " data-aos="fade-down" data-aos-delay="400" >
         <span> <i class="fas fa-heart fa-2x "></i> </span>
         <div class="mt-5 text-md font-bold uppercase ">
             Family Owned
@@ -315,7 +322,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                 
     <div 
       
-    class="pb-30 mx-auto w-1/3   text-gray-400 " data-aos="fade-down" data-aos-delay="400" >
+    class="pb-30 mx-auto w-1/3   text-red-600 " data-aos="fade-down" data-aos-delay="400" >
         <span> <i class="fas fa-home fa-2x "></i> </span>
         <div class="mt-5 text-md font-bold uppercase ">
             Locally Owned
@@ -330,7 +337,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
                 
     <div 
       
-    class="pb-30 mx-auto w-1/3   text-gray-400 " data-aos="fade-down" data-aos-delay="400" >
+    class="pb-30 mx-auto w-1/3   text-red-600 " data-aos="fade-down" data-aos-delay="400" >
         <span> <i class="fas fa-id-card fa-2x "></i> </span>
         <div class="mt-5 text-md font-bold uppercase ">
             Licensed
@@ -347,7 +354,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
             
                 <div class = "mt-10 mb-0 flex flex-row justify-center lg:justify-start text-center w-full lg:max-w-lg">
                 
-                    <h2  class="mb-3 text-4xl justify-center lg:justify-start text-center lg:text-left text-red-800 font-extrabold leading-none tracking-wide text-center">
+                    <h2  class="mb-3 text-4xl justify-center lg:justify-start text-center lg:text-left text-gray-700 font-extrabold leading-none tracking-wide text-center">
                         Connect with us on Social
                     </h2>
                 
@@ -359,7 +366,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
     href = "https://www.facebook.com/JunkJunkiesLLC/"> 
         <span 
              
-            class = " text-gray-400 "> 
+            class = " text-red-600 "> 
             
             <i class="fab fa-facebook fa-3x lg:fa-3x "></i>
         </span> 
@@ -374,7 +381,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
     href = "https://www.google.com/maps/place/Junk+Junkies+llc/@27.9134815,-82.234324,9z/data=!4m2!3m1!1s0x0:0x3a529ee6a3825c3c?sa=X&amp;ved=2ahUKEwjc59iDys_xAhW3lWoFHYyuAEQQ_BIwC3oECDYQBQ"> 
         <span 
              
-            class = " text-gray-400 "> 
+            class = " text-red-600 "> 
             
             <i class="fab fa-google fa-3x lg:fa-3x "></i>
         </span> 
@@ -399,6 +406,474 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
 
     </section>
     
+    
+    
+    <section   id= "services" class="lg:mt-0 relative w-full px-8 font-sans leading-6  bg-gray-700 border-0 border-gray-200 text-white border-solid ">
+        <div class="flex flex-col items-center max-w-6xl px-8 py-20 mx-auto leading-6 border-solid md:items-stretch md:justify-center md:py-24 ">
+            
+            <h2 class="mb-3 lg:pr-9 text-3xl mx-auto font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center">
+                Our Services
+            </h2>
+            <h2  class="w-full lg:pr-9 max-w-3xl mx-0 mx-auto mt-4 mb-0 font-sans text-sm font-medium leading-relaxed text-center text-red-600 border-0 border-gray-200 lg:text-lg md:text-base">
+                What we are best at  - expert  waste management 
+                
+            </h2>
+
+            <div class="grid grid-cols-3 gap-5 mt-10 sm:grid-cols-8 lg:grid-cols-12">
+
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        
+                        <div  class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
+                            <h3  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-red-600  ">Commercial/Residential Cleanups</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
+                                We make our customers’ lives easier when it comes to removing junk. No matter if you are in a house, apartment, garage or office building, we will clean out <b> any </b> space.
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        
+                        <div  class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
+                            <h3  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-red-600  ">Demolitions</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
+                                Deciding to tear something down and remodel? If so, call us because we have all the necessary equipment and experience to tackle the project.
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+                    
+                <div class="max-w-xs col-span-4 font-sans border-0 border-gray-200 ">
+                    <div class="box-border flex flex-col items-center  h-full px-2 py-4 md:py-8 mx-4 leading-6 text-center border-solid ">
+                        
+                        <div  class="md:mt-6 font-sans text-center border-0 border-gray-200 ">
+                            <h3  class="box-border text-xl font-bold leading-none tracking-wider border-solid text-red-600  ">Dumpster Rentals</h3>
+                            <p
+                                class="box-border mx-0 mt-3 mb-0 font-normal leading-snug text-center border-solid">
+                                Prefer to do the job yourself? Dumpster rentals are available: bigger sizes, cheaper prices.
+                            </p>
+                        </div>
+                    </div>
+                </div>        
+            
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <div id="our-work" class="relative mb-0 w-full pt-12 overflow-hidden   bg-white text-gray-700   md:pt-20 xl:pt-20 xl:pb-20">
+        <div class="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0">
+            <h2 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide  text-center">Our Best Work</h2>
+            <h2 class="my-3 mb-10 text-xl font-medium  text-red-600  text-center">See why our customers love us</h2>
+            <div class="flex flex-wrap md:mx-4 md:mb-8 md:flex-row" x-data="{ open:false, activeSlide : 0, slides: [   [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/VOYDDDVPYDDSEIV5K0JWP37YCWTIG8Z35BFZXS4U.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/BNY2BCI660O4U2B6XMEF0POO94QTCDDP13HOQKVL.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/W19TZ6X1H3N7OLAK868N536AQSKFMJNXT93K65X5.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/JCLOPKV0HZUN0T87XD3TVO1OP6KHO59HUL9YOVQB.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/YKW87NJY46X8CLDL3FBXSNLRVG42VVK5ZUYGV63X.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/2GZYW2IQLZ5XIEMJ1U1H19KGBCPWEBWBLOF2H0W9.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/ZNE3SAJ3Y8OX920PFPRYG61RDKC3G6BXU5O60I3J.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/OOMMEMPSYYO3V9DH8T7KMYMZYK48B5F3NGGNLWYX.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/W682J6ZYOGS0ROLYKB9RYO9HFK9E8QNJ2WY2S3O0.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/NIGWG8LO5MATVUHKXCLHW48P3M246X7EYS8PF6M8.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/TBSZYWP0W5Q903TZ4Z0XY65S1ST3KHRLMO3DGZ9J.jpeg', 'photo'],    [ 'https://landing-page-app-hero-images.s3.amazonaws.com/media/FEMJZAAVQTV6Q6W4DQ6DAMK9XG99I2S9B7IYOSNH.jpeg', 'photo'],   ] }" @keydown.escape= "open = false"   >
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 0; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/VOYDDDVPYDDSEIV5K0JWP37YCWTIG8Z35BFZXS4U.jpeg"  alt = "Photo number 1 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 1; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/BNY2BCI660O4U2B6XMEF0POO94QTCDDP13HOQKVL.jpeg"  alt = "Photo number 2 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 2; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/W19TZ6X1H3N7OLAK868N536AQSKFMJNXT93K65X5.jpeg"  alt = "Photo number 3 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 3; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/JCLOPKV0HZUN0T87XD3TVO1OP6KHO59HUL9YOVQB.jpeg"  alt = "Photo number 4 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 4; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/YKW87NJY46X8CLDL3FBXSNLRVG42VVK5ZUYGV63X.jpeg"  alt = "Photo number 5 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 5; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/2GZYW2IQLZ5XIEMJ1U1H19KGBCPWEBWBLOF2H0W9.jpeg"  alt = "Photo number 6 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 6; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/ZNE3SAJ3Y8OX920PFPRYG61RDKC3G6BXU5O60I3J.jpeg"  alt = "Photo number 7 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 7; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/OOMMEMPSYYO3V9DH8T7KMYMZYK48B5F3NGGNLWYX.jpeg"  alt = "Photo number 8 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 8; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/W682J6ZYOGS0ROLYKB9RYO9HFK9E8QNJ2WY2S3O0.jpeg"  alt = "Photo number 9 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 9; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/NIGWG8LO5MATVUHKXCLHW48P3M246X7EYS8PF6M8.jpeg"  alt = "Photo number 10 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 10; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/TBSZYWP0W5Q903TZ4Z0XY65S1ST3KHRLMO3DGZ9J.jpeg"  alt = "Photo number 11 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                                    
+                        
+                              
+                        <div class="flex cursor-pointer sm:h-30 md:h-auto md:w-1/3 px-4 mb-8 hover:bg-opacity-40" @click="activeSlide = 11; open = true; " ><img class="rounded shadow-md object-cover w-full h-60" src="https://landing-page-app-hero-images.s3.amazonaws.com/media/FEMJZAAVQTV6Q6W4DQ6DAMK9XG99I2S9B7IYOSNH.jpeg"  alt = "Photo number 12 of Junk Junkies, LLC&#x27;s best work performing a null job"   loading="lazy" ></div>
+                    
+                 
+                                    
+        
+                <div class="z-50 fixed top-0 left-0 w-full h-full flex items-center justify-center" x-show.transition="open" >
+
+
+                
+                
+                    <div class="flex items-center justify-start w-12  ml-6 md:m-2 z-50 absolute bottom-1/4 md:bottom-0 transform translate-x-12 md:translate-x-32" >
+                    <button
+                    
+                            class="text-white w-12 h-12 rounded-full flex items-center justify-center focus:outline-none bg-red-600"                                
+                            @click="open = false">
+                         <span class = "text-white"> <i class="fas fa-lg fa-times"></i> </span>
+                    </button>
+                    </div>
+
+                    <div class= "h-90 w-90 flex items-center justify-center overflow-hidden">
+
+                        <template  x-for="(slide, index, collection) in slides" :key="index">
+                            <div class="h-full w-full flex items-center justify-center absolute">
+                                <div class="absolute top-0 bottom-0 py-2  px-2 flex flex-col items-center justify-center"
+                                    x-show="activeSlide === index" 
+                                    x-transition:enter="transition ease-out duration-150"
+                                    x-transition:enter-start="opacity-0 transform scale-90"
+                                    x-transition:enter-end="opacity-100 transform scale-100"
+                                    x-transition:leave="transition ease-in duration-150"
+                                    x-transition:leave-start="opacity-100 transform scale-100"
+                                    x-transition:leave-end="opacity-0 transform scale-90">
+
+                                    <template x-if="slide[1] === 'photo' ">
+                                        <img :src="slide[0]" class="object-contain max-w-full max-h-full rounded shadow-lg" />
+                                    </template>
+                                    
+                                    <template x-if="slide[1] != 'photo'  ">
+                                        <video class="object-contain max-w-full max-h-full rounded shadow-lg"  controls> <source :src="slide[0]" >
+                                        </video>
+                                    </template> 
+                                    
+                                </div>
+                                <div  class="fixed text-red-600 text-sm font-bold bottom-0 transform -translate-x-10 w-40 h-12 mb-2 hidden md:flex justify-center items-center"
+                                    x-show="activeSlide === index">
+                                    <span class="w-12 text-right" x-text="index + 1"></span>
+                                    <span class="w-4 text-center">/</span>
+                                    <span class="w-12 text-left" x-text="slides.length"></span>
+                                </div>
+                            </div>
+                        </template>
+
+                    <div class="fixed md:fixed z-50 absolute bottom-1/4 md:bottom-0 md:mb-2 transform -translate-x-8 md:-translate-x-10 flex justify-center" @click.away="open = false">
+                        <div class="flex items-center justify-end w-12 mr-3 md:mr-16">
+                        <button 
+                                type="button"
+                                
+                                class="w-12 h-12 rounded-full focus:outline-none flex items-center justify-center bg-red-600" 
+                               
+                                @click="activeSlide = activeSlide === 0 ? slides.length - 1 : activeSlide - 1">
+                                <span class = "text-white"> <i class="fas fa-lg fa-chevron-left"></i> </span>
+                           
+                        </button>
+                        </div>
+                        <div class="flex items-center justify-start w-12 md:ml-16">
+                        <button 
+                                type="button"
+                                
+                                class="text-white font-bold w-12 h-12 rounded-full focus:outline-none flex items-center justify-center  bg-red-600   "
+                               
+                                @click="activeSlide = activeSlide === slides.length - 1 ? 0 : activeSlide + 1">
+                           <span class = "text-white"> <i class="fas fa-lg fa-chevron-right"></i> </span>
+                        </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>     
+
+            
+</div>
+
+        
+    
+    
+    <div  id= "testimonials" class=" flex items-center justify-center  bg-gray-700 text-white  py-20 min-w-screen px-4">
+        <div class="px-16 ">
+            <div class="container flex flex-col items-center lg:items-startmx-auto lg:items-center">
+                <div class = "sm:mb-4 md:mb-0">
+                <h2  class="relative flex  text-red-600 text-center sm:justify-center sm:mb-8 md:justify-start w-full text-lg font-bold tracking-wider uppercase lg:justify-center lg:items-center mb-10">Don&#x27;t just take our word for it</h2>
+                </div>
+
+
+                <h2 class="mb-3 text-3xl font-extrabold leading-none sm:text-4xl lg:text-7xl tracking-wide text-center ">
+                    
+                    Testimonials &amp; Reviews</h2>
+                <div class="block w-full h-1 max-w-lg mt-6 bg-purple-100 rounded-full"></div>
+                
+                
+
+                <div class="items-start justify-start w-full mt-12 mb-4 lg:flex lg:flex-wrap">
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Adrianna Valdez</h3>
+                            <h3 class=" text-white ">Valued Customer  , Commercial/Residential Cleanups  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Best ever experience from FB search.   Junk Junkies did an awesome job hauling off a large amount of old wood fencing .   Great communication, fair prices , extremely professional and friendly.  If you need something hauled, landscaped , pressure washed or painted..... do yourself a favor and contact Junk Junkies."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Jamie Rose</h3>
+                            <h3 class=" text-white ">Valued Customer  , Demolitions  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Awesome experience with these guys. Super professional, they showed up on time and did an amazing job with tear down and clean up. They worked proficiently and were extremely prompt getting the job done in such short time. I would definitely recommend this company to anyone looking for reliable and affordable demolition tear down projects."</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Tiffany Barnes Thomas</h3>
+                            <h3 class=" text-white ">Valued Customer  , Dumpster Rentals  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Junk junkies are just simply amazing!!! Owners were able to accommodate my husband and I in the middle of crisis, when others were less to offer anything!! Adriana and Dakota were more than accommodating! They delivered a trailer to our residence early in the morning, the day of need, and we’re able to pick it up the following day. They were extremely professional, efficient and affordable! I would recommend them to anyone! You cannot go wrong with this company! Thank you Junk Junkies again, y’all are awesome! ❤️😘"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Haylie Castillo</h3>
+                            <h3 class=" text-white ">Valued Customer  , Commercial/Residential Cleanups  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"I needed a few miscellaneous items hauled away because we were moving. The Junk Junkies made it easy and painless! They showed up when they said they would, set clear and fair expectations with pricing, listened and did exactly what was needed and were pleasant to deal with. Cant ask for much more than that! Also, they had the option of using Venmo which was a nice touch for this millennial. 😉"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Brit Daniel</h3>
+                            <h3 class=" text-white ">Valued Customer  , Commercial/Residential Cleanups  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"Junk Junkies went above and beyond with our junk pile clean up. We had a good bit of brush and fallen branches, as well as a shed clean out with old doors, drywall and fence panels that they removed within an hour. They also cleared all of the leaves that had accumulated in our rocks and left our bricks from under the pile behind as requested. They even stacked them neatly. We are so impressed and happy to have our yard junk free! They were excellent negotiators and met us on price, too. Can’t recommend them enough! We will definitely be hiring them in the future for more clean up and pressure washing, soon! Thanks so much for your hard work!"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+            
+                    <div class="flex flex-col items-center lg:items-start justify-center w-full h-auto mb-12 lg:w-1/2">
+                    <div class="flex items-center lg:items-start ">
+                        
+                        <div class="flex flex-col justify-start items-center lg:items-start ">
+                            <h3 class="font-bold  text-white  ">Jane Smith</h3>
+                            <h3 class=" text-white ">Valued Customer  , Commercial/Residential Cleanups  </h3>
+                            <div class="flex flex-row items-start ">
+                                
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                <span class = " text-white "> <i class="fas fa-star"> </i> </span>
+                                
+                                
+                            </div>
+                            <blockquote class="mt-8 lg:pr-5 font-bold text-xl text-center lg:text-left   text-white ">"I called Junk junkies because I had a screened in porch that was full of junk. An old dresser, brokem coffee table, cardboard boxes full of ols things, trash bags full of old clotges...On top of that, I had a few trash bags out there that an animal had gotten into in torn apart. I didn't want to touch that stuff, nor did I even know where to start. I called and spoke to the owner Dakoda and he said it was no problem.  He showed up on time, was quick and efficient, and left my porch cleaner than it was when I moved in. I couldn't believe it! Not only did he take care of my problem, but he did it cheaper than anyone else! I'll never call anyone else again! Thank you Junk Junkies!"</blockquote>                           
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    
+                </div>  
+                
+                <div class = "flex flex-col space-y-5 md:flex-row md:space-x-5 md:space-y-0 ">
+                
+                <a target= "_blank" href="https://www.facebook.com/JunkJunkiesLLC/reviews/?ref=page_internal"  class="w-full">
+                    <button   type="button" class="inline-flex w-full items-center justify-center h-16 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none   text-white  bg-red-600  hover:bg-white hover:text-gray-700 ">
+                            <h5 class="text-2xl font-extrabold">Leave a Review</h5> 
+                    </button>
+                </a>
+                
+             
+                
+                <a target= "_blank" href="https://www.facebook.com/JunkJunkiesLLC/reviews/?ref=page_internal" class="w-full">
+                    <button  type="button" class="inline-flex w-full  items-center justify-center h-16 px-6 lg:mr-6 tracking-wide transition duration-200 rounded-lg focus:shadow-outline focus:outline-none   text-white  bg-red-600  hover:bg-white hover:text-gray-700 ">
+                            <h5 class="text-2xl font-extrabold">See More Reviews</h5> 
+                    </button>
+                </a>
+               
+            </div>
+
+                         
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+<section id= "faqs" class="py-16   bg-white text-gray-700  md:py-20 lg:py-24">
+    <div class="max-w-5xl px-12 mx-auto xl:px-0">
+
+        <h2  class="mb-5 text-3xl  mx-auto text-center font-extrabold leading-none sm:text-4xl lg:text-7xl">Faqs</h2>
+         <h2  class="my-3 mb-10  text-xl font-medium  text-red-600 text-center">Your questions answered</h2>
+
+        <div class="relative mt-12 space-y-3">
+
+        
+
+            <!-- Question 1 -->
+            <div x-data="{ show: false }" class="relative overflow-hidden border-b border-gray-100 select-none">
+                <h3                 
+                @click="show=!show" class=" text-center flex items-center justify-between px-2 text-xl font-medium text-gray-700  cursor-pointer sm:text-xl md:text-2xl py-7 hover:text-red-600  lg:text-left">
+                    <span class = "flex text-left lg:text-left">What is the best way to get a quote?</span>
+                    <svg class="w-6 h-6 mr-2 transition-all duration-200 ease-out transform rotate-0" :class="{ '-rotate-180' : show }" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </h3>
+                <p  class="px-2 pt-0 -mt-2  sm:text-lg py-7 text-gray-700 text-center lg:text-left"
+                    x-transition:enter="transition-all ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform -translate-y-0"
+                    x-transition:leave="transition-all ease-in duration-300"
+                    x-transition:leave-start="opacity-100 transform -translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4"
+                    x-show="show"
+                    x-cloak>The best way to get in touch is to call or text (727) 401-9535. You can also reach us via email at junkjunkiesllc@gmail.com. We provide personal attention to every customer.</p>
+            </div>
+
+        
+
+        </div>
+    </div>
+</section>
+
+    
 
 <div id="service-area-array" class = "hidden">
 
@@ -410,7 +885,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
     
 </div> 
 
-<section id="find-us" class="py-16   bg-white text-red-800  md:py-20 lg:py-20">
+<section id="find-us" class="py-16   bg-white text-gray-700  md:py-20 lg:py-20">
 
    
    
@@ -418,7 +893,7 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
    
 
     <h2  class="mb-5 text-3xl  mx-auto text-center font-extrabold leading-none sm:text-4xl lg:text-7xl"> Service Areas </h2>
-    <h2  class="my-3 mb-10  text-xl font-medium text-gray-400 text-center"> Proudly Serving   Florida & Surrounding Areas   </h2>
+    <h2  class="my-3 mb-10  text-xl font-medium text-red-600 text-center"> Proudly Serving   Florida & Surrounding Areas   </h2>
     <div style="height:500px; width:100%;" id="map"></div>
 
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
@@ -433,35 +908,34 @@ class="flex flex-col flex-grow w-full overflow-hidden  lg:flex-row sm:mx-auto  b
 </section>
 
 
-    
 
-<section  class="py-10 bg-red-800">
+    <section  class="py-10 bg-gray-700">
     
         <div class="flex flex-col justify-around text-center md:flex-row">
-            <p class="order-last text-sm leading-tight text-gray-400 md:order-first"> Crafted with <a  href="https://www.prophone.com/prosite" class="  text-white ">ProPhone</a>. Built with ❤️ by our team. </p>
+            <p class="order-last text-sm leading-tight text-red-600 md:order-first"> Crafted with <a  href="https://www.prophone.com/prosite" class="  text-white ">ProPhone</a>. Built with ❤️ by our team. </p>
              
             <ul class="flex flex-row flex-wrap text-center justify-center pb-3 lg:-ml-4 lg:-mr-4 text-sm">
-                <li> <a  href="#about" class="px-2 md:px-4 text-gray-400 hover:text-white">About Us</a> </li>
+                <li> <a  href="#about" class="px-2 md:px-4 text-red-600 hover:text-white">About Us</a> </li>
                 
-                <li> <a  href="#services" class="px-2 md:px-4 text-gray-400 hover:text-white">Our Services</a> </li>
-                
-                
-                <li> <a  href="#our-work" class=" px-2 md:px-4 text-gray-400 hover:text-white">Our Best Work</a> </li>
+                <li> <a  href="#services" class="px-2 md:px-4 text-red-600 hover:text-white">Our Services</a> </li>
                 
                 
-                <li> <a  href="#testimonials" class="px-2 md:px-4 text-gray-400 hover:text-white">Testimonials &amp; Reviews</a></li>
+                <li> <a  href="#our-work" class=" px-2 md:px-4 text-red-600 hover:text-white">Our Best Work</a> </li>
                 
                 
-                <li> <a  href="#faqs" class="px-2 md:px-4 text-gray-400 hover:text-white">Faqs</a></li>
+                <li> <a  href="#testimonials" class="px-2 md:px-4 text-red-600 hover:text-white">Testimonials &amp; Reviews</a></li>
+                
+                
+                <li> <a  href="#faqs" class="px-2 md:px-4 text-red-600 hover:text-white">Faqs</a></li>
                 
                 
                 
-                <li> <a  href="#find-us" class=" px-2 md:px-4 text-gray-400 hover:text-white">Service Areas</a></li>
+                <li> <a  href="#find-us" class=" px-2 md:px-4 text-red-600 hover:text-white">Service Areas</a></li>
                 
             </ul>
         </div>
     </div>
-</section> 
+</section>     
 </div> 
 
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
